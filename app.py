@@ -216,7 +216,7 @@ def history():
     """Display OCR Image History for the user"""
     if request.method == "GET":
         # Get user data in DB
-        user_data = db.execute("SELECT * FROM ocr WHERE user_id = ?", session['user_id'])
+        user_data = db.execute("SELECT * FROM ocr WHERE user_id = ?", str(session['user_id']))
         return render_template('history.html', user_data=user_data)
 
 
