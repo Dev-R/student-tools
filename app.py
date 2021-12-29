@@ -254,10 +254,13 @@ def errorhandler(error):
         error = InternalServerError()
         error = str(error.name) + str(error.code)
     if error:
-        
-        error = 'Please Try again, Error: ' + str(error.code) + ' Reported' 
-        flash(error)
+        code =  str(error.code)
+        error = 'Error: ' + code + ' Reported, Please Try again' 
         # TO-DO: Create an Error table in database to keep track of user errors
+        #If internal error, logout user
+        if code == "500":
+            session.clear()
+        flash(error)
         return render_template('index.html')
 
 
