@@ -22,16 +22,19 @@ CONTAINER_NAME =  "img-uploads"
 # Get Local time
 LOCAL_TIMEZONE = (datetime.now()).strftime("%m-%d-%Y, %H:%M:%S")
 # Set to the full path of the upload file in static
-UPLOAD_FOLDER = '/home/ubuntu/project/static/uploads'
-#  Set to the full path of the current Project Directory
-CURRENT_PROJECT_DIR = '/home/ubuntu/project'
+UPLOAD_FOLDER = '/app/static/uploads'
+#  Set to the full path of the current Project Directory 
+CURRENT_PROJECT_DIR = '/app'
 
 # Configure application
 app = Flask(__name__)
-# app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
-
+app.secret_key = 'A0AKR5TGD\ R~XHH!jmN]LWX/,?RT'
+# app.config['SECRET_KEY'] = os.urandom(24)
+# this is important or wont work
+app.config['SESSION_COOKIE_NAME'] = "my_session"
 # Configure Database
-db = SQL("sqlite:///site.db")
+db = SQL(os.getenv("DATABASE_URL"))
+
 # Membership types
 MEMBER_SHIP = {'A': 'ADMIN', 'G': 'GUEST'}
 
