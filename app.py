@@ -258,7 +258,6 @@ def errorhandler(error):
         error = 'Please Try again, Error: ' + str(error.code) + ' Reported' 
         flash(error)
         # TO-DO: Create an Error table in database to keep track of user errors
-        session.clear()
         return render_template('index.html')
 
 
