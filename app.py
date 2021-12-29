@@ -22,7 +22,7 @@ CURRENT_PROJECT_DIR = '/app'
 
 # Configure application
 app = Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = 'A0AKR5TGD\ R~XHH!jmN]LWX/,?RT'
 # app.config['SECRET_KEY'] = os.urandom(24)
 # this is important or wont work
 app.config['SESSION_COOKIE_NAME'] = "my_session"
@@ -36,7 +36,7 @@ MEMBER_SHIP = {'A': 'ADMIN', 'G': 'GUEST'}
 # The directory where session files are stored.
 # app.config["SESSION_FILE_DIR"] = mkdtemp()
 # Whether use permanent session or not, default to be True
-app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_PERMANENT"] = True
 # Specifies which type of session interface to use.
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
