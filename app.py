@@ -34,7 +34,7 @@ MEMBER_SHIP = {'A': 'ADMIN', 'G': 'GUEST'}
 
 """Configure session to use filesystem (instead of signed cookies) and other app configuration"""
 # The directory where session files are stored.
-app.config["SESSION_FILE_DIR"] = mkdtemp()
+# app.config["SESSION_FILE_DIR"] = mkdtemp()
 # Whether use permanent session or not, default to be True
 app.config["SESSION_PERMANENT"] = False
 # Specifies which type of session interface to use.
