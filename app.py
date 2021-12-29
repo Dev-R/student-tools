@@ -64,7 +64,8 @@ def redirect_homepage():
 # Render index
 @app.route('/index', methods=["GET", "POST"])
 def homepage():
-    return render_template('index.html')
+    username = check_login_status()
+    return render_template('index.html',  user=username, session=session)
 
 
 # Redirect to index
@@ -239,7 +240,14 @@ def remember_user_ocr_file(filename, ocr_text)-> None:
     db.execute("INSERT INTO ocr (user_id, img_dir, img_text, execution_date) VALUES(?, ?, ?, ?)", session['user_id'], 
                get_image_path(filename).replace(CURRENT_PROJECT_DIR, ""), ocr_text, str(LOCAL_TIMEZONE))
     
-
+def check_login_status() -> bool:
+    """Check if user logged in"""
+    if session:
+        username = db.execute("SELECT username FROM users WHERE id = ?", session['user_id'])[0]['username']
+        if username:
+            return username
+        return False
+    
 def errorhandler(error):
     """Handle error"""
     if not isinstance(error, HTTPException):
