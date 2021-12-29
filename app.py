@@ -39,7 +39,7 @@ redis = redis.from_url(redis_url)
 # The directory where session files are stored.
 # app.config["SESSION_FILE_DIR"] = mkdtemp()
 # Whether use permanent session or not, default to be True
-app.config["SESSION_PERMANENT"] = True
+app.config["SESSION_PERMANENT"] = False
 # Specifies which type of session interface to use.
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
