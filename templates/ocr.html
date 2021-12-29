@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block title %}
+Text Extraction (OCR)🤖📚
+{% endblock %}
+
+{% block main %}
+<div class='container'>
+        <div class='col'>
+          <h1>Text Extraction (OCR)🤖📷</h1>
+          <h8>Make Sure The Image is Clear and Focused 😁✔</h8>
+          <form method="post" enctype="multipart/form-data">
+            <label for="upload-btn" id ='label'>Upload an Image</label>
+            <div class="form-group" id='upload-section'>
+              <div id='input-section' style="display:block">
+                <input type="file" name="file" id="file_upload" oninput="check();"><br>
+              </div>
+              <div id='btn-section' style="display:none">
+                <br>
+                <button type="submit" id='upload-btn' class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play" viewbox="0 0 20 20"></svg>⬆ Upload ☁</button>
+              </div>
+              <div id='hidden' style="display:none">
+                <button class="btn btn-dark" type="button" disabled>Loading...</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+<script>
+
+/**
+function check() {
+
+  document.getElementById("btn-section").style.display = "block";
+};
+**/
+
+
+function check(){
+
+var file = document.getElementById('file_upload');
+var allowedExtensions =  /(\.jpg|\.jpeg|\.png|\.gif|\.jfif)$/i;
+     // Verify input
+    if(file.value === null || file.value === ""){
+            alert("Please Select A File");
+            return false;
+    }
+    // Verify file format
+     else if(!(file.value === null || file.value === ""))
+{
+        if (!allowedExtensions.exec(file.value)) {
+                alert('Invalid file type');
+                file.value = '';
+                document.getElementById("btn-section").style.display = "none";
+                return false;
+            } 
+} 
+// else, show input button
+        document.getElementById("btn-section").style.display = "block";
+}
+    
+
+// Hide upload button and input section
+document.getElementById('upload-btn').addEventListener('click', function()
+{
+                //document.getElementById("upload-section").innerHTML ='';
+
+                document.getElementById("input-section").style.display = "none";
+                document.getElementById("btn-section").style.display = "none";
+                document.getElementById("hidden").style.display = "block";
+                document.getElementById("label").innerHtml = "Uploading An Image";
+                //document.getElementById("loader").className ='loader';
+})
+
+</script>
+{% endblock %}

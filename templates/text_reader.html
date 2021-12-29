@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block title %}
+Text to Speech🤖🔊
+{% endblock %}
+{% block main %}
+<div class='container'>
+    <div class='col'>
+        <h1>Text to Speech🤖🔊</h1>
+        <div class="form-group">
+            <label for="text_reader_box">Paste A Text Here</label> 
+            <textarea class="form-control" id="phraseDiv"  rows="5"></textarea>
+            <div class="btn" id='btn-sec'>
+                <button id='startSpeakTextAsyncButton' type="button" class="btn btn-dark" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" id="startSpeakTextAsyncButton" fill="currentColor" class="bi bi-play" viewbox="0 0 20 20">
+                        <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"></path>
+                    </svg>
+                    Read 🔊
+                </button>
+            </div>
+            <div><small>
+              Provided By Microsoft Azure<a href='https://github.com/Azure-Samples/cognitive-services-speech-sdk'> Cognitive Services Speech  SDK</a>
+            </small></div>
+        </div>
+    </div>
+</div>
+<!-- Speech SDK reference sdk. -->
+<script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+<!--MICROSOFT SPEECH SDK USAGE -->
+<script src='../static/SpeechSDK.js'></script>
+<script>function Reset() {
+  document.getElementById("startSpeakTextAsyncButton").reset();
+}
+</script>
+{% endblock %}

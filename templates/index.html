@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome!❤
+{% endblock %}
+
+{% block main %}
+                <!--ilovepdf -->
+        <div class="home-title">
+                         {% if session.user_id %}
+                         <h1 class="subtitle">Hello {{user}} ! 😁</h1>
+                         {% endif %}
+                        <h1 class="title">Use The latest AI Cloud Computing Technologies</h1>
+                        <h2 class="subtitle">Choose one of the following<br> Technologies</h2>
+                        <h8 class="subtitle"> <a href='https://dev-r.github.io/portfolio/' >@By Rabee Mohammed</a</h8>
+                </div>
+                <div class='container'>
+                        <div class='col'> <a href="ocr">
+                                        <h4>Text Extraction (OCR)🤖📷</h4>
+                                        <small>Using OCR: Optical character recognition
+                                        </small>
+                                </a> 
+                                <p>Extract printed and handwritten text from images and documents <br> <br>Using Microsoft Computer Vision SDK </p>
+                        </div> <br><br>
+                        <div class='col'> <a href="text_reader">
+                                        <h4>Text to Speech🤖🔊</h4>
+                                        <p>Convert text into natural-sounding speech</p>
+                                        
+                                </a> <p>Using Microsoft latest Cloud computing Speech Synthesize Technology</p>
+                        </div>
+                
+                </div> <video id="bgVideo" controls preload="true" autoplay loop muted>
+                        <source src="../static/Smoke.mp4" type="video/mp4"> Your browser does not support the video tag.
+                </video>
+        </div>
+{% endblock %}
+

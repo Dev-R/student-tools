@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login🚪
+{% endblock %}
+
+{% block main %}
+<div class='container'>
+                        <div class='col'>
+                                <h1>Login</h1>
+                                <form action='/login' method="post">
+
+                                        <div class="form-group"> 
+                                                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+                                         </div>
+                                        <div class="form-group"> 
+                                                <input class="form-control" name="password" placeholder="Password" type="password">
+                                        </div>
+                                         <button type="submit" class="btn btn-dark">Login</button>
+                                </form> 
+                                <a href='signup'> <small id="Signup" class="form-text">Don't Have an Account?, Sign up.</small> </a>
+                        </div>
+                </div>
+        </div>
+        </div>
+{% endblock %}

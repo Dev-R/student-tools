@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}
+   History 📃
+{% endblock %}
+
+{% block main %}
+        <div class='container'>
+                        <div class='col'>
+                            <table class = 'table'>
+                                <thead>
+                                   <tr>
+                                      <th scope="col">ID</th>
+                                      <th scope="col">Date</th>
+                                      <th scope="col">Text</th>
+                                      <th scope="col">Image</th>
+                                    
+                                </thead>
+                                <tbody>
+                                    {% for data in user_data %}
+                                   <tr>
+                                      <th scope="row">{{data.id}}</th>
+                                      <td>{{data.execution_date}}</td>
+                                      <td class='ocr-text'>{{data.img_text}}</td>
+                                      <td><a href ="{{data.img_dir}}"  target="_blank"> <small>Open Image</small>🖼 </a>  </td>
+                                   </tr>
+                                    {% endfor %}
+                                </tbody>
+                             </table>
+                         </div>
+                </div>
+        </div>
+{% endblock %}
