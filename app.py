@@ -23,7 +23,7 @@ CURRENT_PROJECT_DIR = '/app'
 # Configure application
 app = Flask(__name__)
 # app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
-app.config['SECRET_KEY'] = os.urandom(24)
+# app.config['SECRET_KEY'] = os.urandom(24)
 # this is important or wont work
 app.config['SESSION_COOKIE_NAME'] = "my_session"
 # Configure Database
