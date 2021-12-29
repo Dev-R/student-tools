@@ -30,6 +30,8 @@ app.config['SESSION_COOKIE_NAME'] = "my_session"
 db = SQL(os.getenv("DATABASE_URL"))
 # Membership types
 MEMBER_SHIP = {'A': 'ADMIN', 'G': 'GUEST'}
+# redis configuration 
+redis_url = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
 
 
 """Configure session to use filesystem (instead of signed cookies) and other app configuration"""
