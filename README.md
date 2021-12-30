@@ -1,6 +1,6 @@
 # CS50 Final Project - StudentTools
-*StudentTools* is a web app using Flask and Bootstrap where students can find all of the tools they need to succeed.
-
+#### Video Demo: https://youtu.be/zuLPh00LrgY
+#### Description: *StudentTools* is a web app using Flask and Bootstrap where students can find all of the tools they need to succeed.
 # Features
 - [Microsoft Cognitive Services Speech SDK](https://github.com/microsoft/cognitive-services-speech-sdk-js)
 - [Microsoft Cognitive Services Computer Vision SDK](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/cognitiveservices/azure-cognitiveservices-vision-computervision)
