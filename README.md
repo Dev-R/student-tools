@@ -109,7 +109,8 @@ app.config["SESSION_FILE_DIR"] = mkdtemp()
 app.config["SESSION_PERMANENT"] = False
 # Specifies which type of session interface to use.
 app.config["SESSION_TYPE"] = "filesystem"
-
+### Azure resouces
+ - ![Azure](https://i.ibb.co/mzyXqSN/Screenshot-2021-12-31-000547.png)
 
 ## Possible improvements 📃
 *Ability to*:
