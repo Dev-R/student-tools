@@ -23,32 +23,32 @@ The following are the core dependancies required
 ## Set up
 
 ## Set to the full path of the upload file in static
-- UPLOAD_FOLDER = ''
+- UPLOAD_FOLDER = "DIR NAME"
 ##  Set to the full path of the current Project Directory 
-- CURRENT_PROJECT_DIR = ''
+- CURRENT_PROJECT_DIR = "DIR NAME"
 
 ## Add Azure Computer Vision Token and Endpoint in helpers.py
-- subscription_key = "ENTER YOUR MICROSOFT COMPUTER VISION KEY"
-- endpoint = "ENTER YOUR MICROSOFT COMPUTER VISION ENDPOINT"
+- subscription_key = "AZURE COMPUTER VISION KEY"
+- endpoint = "AZURE COMPUTER VISION ENDPOINT"
 
 ## Add Azure Text To Speech Token in SpeechSDK.js 
-- subscriptionKey = 'ENTER YOUR MICROSOFT TTS subscriptionKey';
-- serviceRegion = 'ENTER YOUR MICROSOFT TTS REGION';
+- subscriptionKey = 'AZURE TTS subscriptionKey';
+- serviceRegion = 'AZURE TTS REGION';
 
 ### Export Azure Connection String 
-
-export AZURE_STORAGE_CONNECTION_STRING = "YOUR CONNECTIONS STRING"
+- export AZURE_STORAGE_CONNECTION_STRING = "YOUR CONNECTIONS STRING"
 
 ### Set up Azure Storage Account name 
-
-AZURE_STORGE_ACCOUNT = "Azure Storage Account Name "
+- AZURE_STORGE_ACCOUNT = "Azure Storage Account Name "
 
 ### Set up  Azure BLOB Container name
-
-CONTAINER_NAME = "BLOB CONTAINER NAME"
+- CONTAINER_NAME = "BLOB CONTAINER NAME"
 
 ### The AZURE_STORGE_ACCOUNT, CONTAINER_NAME are concatenated it together to produce the following link
-"https://" + AZURE_STORGE_ACCOUNT + ".blob.core.windows.net" + '/' + CONTAINER_NAME + '/' + filename"
+- "https://" + AZURE_STORGE_ACCOUNT + ".blob.core.windows.net" + '/' + CONTAINER_NAME + '/' + filename"
+
+### Azure container
+ - ![Azure](https://i.ibb.co/g41pJLc/azure-container.png)
 # Project Explaination
 ## Project Background
 The project main idea is to provide a site where students can find all of the tools they need, in such a way
