@@ -22,8 +22,6 @@ The following are the core dependancies required
 - For All dependancies check here [Requiremenets](https://github.com/Dev-R/student-tools/blob/main/requirements.txt)
 ## Set up
 
-### Change Directory in app.py
-python
 ## Set to the full path of the upload file in static
 - UPLOAD_FOLDER = ''
 ##  Set to the full path of the current Project Directory 
