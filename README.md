@@ -1,4 +1,4 @@
-# CS50 Final Project - StudentTools 👨‍🎓📚
+# CS50 Final Project - StudentTools
 *StudentTools* is a web app using Flask and Bootstrap where students can find all of the tools they need to succeed.
 
 # Features
