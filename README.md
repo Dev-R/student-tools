@@ -47,16 +47,16 @@ AZURE_STORGE_ACCOUNT = "Azure Storage Account Name "
 
 CONTAINER_NAME = "BLOB CONTAINER NAME"
 
-### The AZURE_STORGE_ACCOUNT, CONTAINER_NAME are concatinated it together to produce the following link
+### The AZURE_STORGE_ACCOUNT, CONTAINER_NAME are concatenated it together to produce the following link
 "https://" + AZURE_STORGE_ACCOUNT + ".blob.core.windows.net" + '/' + CONTAINER_NAME + '/' + filename"
 # Project Explaination
 ## Project Background
 The project main idea is to provide a site where students can find all of the tools they need, in such a way
 they don't need to visit more than one site for different tools. 
 - The students(users) can use *OCR(Optical character recognition)*
-to extract text from *images or there hand written notes* 
-- The students(users) can *converts text to lifelike speech* using Microsoft Azure TTS SDK
-- The students(users) can login and *save and check their upload history*.
+to extract text from *images or their handwritten notes* 
+- The students(users) can *convert text to lifelike speech* using Microsoft Azure TTS SDK
+- The students(users) can log in and *save and check their upload history*.
 
 # Demonstration
 ## Main Page
@@ -86,11 +86,11 @@ to extract text from *images or there hand written notes*
 - Used Azure Microsoft Cognitive Services Computer Vision SDK to process images
 - Used Azure BLOB to store media object
 ### Security
-- Use POST request to send data to the server as it is more secure then GET
+- Use a POST request to send data to the server as it is more secure than GET
 - Encrypt user password using SHA256 hash function 
 - Use UUID to change image name to new secure name
 ### Database
-- The Database use PostgreSQL for quries and Azurre BLOB for media. It is used to stores user credentials and students OCR upload History.
+- The Database use PostgreSQL for queries and Azure BLOB for media. It is used to store user credentials and students OCR upload History.
   there are mainly two tables, Users and OCR
 ## Users Table
  - ![Users Table](https://i.ibb.co/7v20nsv/users-table.png)
